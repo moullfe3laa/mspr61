@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.8.0" timestamp="2021-12-05T20:25:23.661">
+<file name="D:\data\Formations\EPG\2021-22\B3\IC\Cours\MavenDemo\target\clover\src\com\mycompany\app\App.java">
+<violation beginline="8" endline="8" begincolumn="2574" endcolumn="2603" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.NoClassDefFoundError' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="370" endcolumn="385" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" method="invoke" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.Object' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="394" endcolumn="409" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" method="invoke" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.Object' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="440" endcolumn="455" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" method="invoke" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.Object' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="2277" endcolumn="2303" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.SecurityException' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="2214" endcolumn="2229" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.String' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="164" endcolumn="189" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.SuppressWarnings' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="2795" endcolumn="2813" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.Throwable' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="8" endline="8" begincolumn="699" endcolumn="738" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="com.mycompany.app" class="App$__CLR4_3_100kwtmwvaf" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'java.lang.reflect.Proxy.newProxyInstance' due to existing implicit import 'java.lang.*'
+</violation>
+<violation beginline="33" endline="35" begincolumn="26" endcolumn="52" rule="UnnecessaryModifier" ruleset="Code Style" package="com.mycompany.app" class="App" method="getMessage" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'final' on method 'getMessage': private methods cannot be overridden
+</violation>
+</file>
+</pmd>

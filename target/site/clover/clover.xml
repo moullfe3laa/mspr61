@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1638732333866" clover="4.3.1">
+   <project name="my-app 1.0-SNAPSHOT" timestamp="1638732322718">
+      <metrics coveredelements="5" complexity="3" loc="36" methods="3" classes="1" statements="2" packages="1" coveredconditionals="0" coveredmethods="3" elements="5" ncloc="12" files="1" conditionals="0" coveredstatements="2"/>
+      <package name="com.mycompany.app">
+         <metrics coveredelements="5" complexity="3" loc="36" methods="3" classes="1" statements="2" coveredconditionals="0" coveredmethods="3" elements="5" ncloc="12" files="1" conditionals="0" coveredstatements="2"/>
+         <file path="D:\data\Formations\EPG\2021-22\B3\IC\Cours\MavenDemo\src\main\java\com\mycompany\app\App.java" name="App.java">
+            <metrics coveredelements="5" coveredconditionals="0" complexity="3" loc="36" coveredmethods="3" methods="3" elements="5" classes="1" ncloc="12" statements="2" conditionals="0" coveredstatements="2"/>
+            <class name="App">
+               <metrics coveredelements="5" coveredconditionals="0" complexity="3" coveredmethods="3" methods="3" elements="5" statements="2" conditionals="0" coveredstatements="2"/>
+            </class>
+            <line complexity="1" visibility="public" signature="App()" num="18" count="2" type="method"/>
+            <line complexity="1" visibility="public" signature="main(String[]) : void" num="24" count="1" type="method"/>
+            <line num="25" count="1" type="stmt"/>
+            <line complexity="1" visibility="private" signature="getMessage() : String" num="33" count="1" type="method"/>
+            <line num="34" count="1" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="my-app 1.0-SNAPSHOT" timestamp="1638732322718">
+      <metrics coveredelements="11" complexity="6" loc="62" methods="4" classes="1" statements="9" packages="1" coveredconditionals="0" coveredmethods="4" elements="13" ncloc="37" files="1" conditionals="0" coveredstatements="7"/>
+      <package name="com.mycompany.app">
+         <metrics coveredelements="11" complexity="6" loc="62" methods="4" classes="1" statements="9" coveredconditionals="0" coveredmethods="4" elements="13" ncloc="37" files="1" conditionals="0" coveredstatements="7"/>
+         <file path="D:\data\Formations\EPG\2021-22\B3\IC\Cours\MavenDemo\src\test\java\com\mycompany\app\AppTest.java" name="AppTest.java">
+            <metrics coveredelements="11" coveredconditionals="0" complexity="6" loc="62" coveredmethods="4" methods="4" elements="13" classes="1" ncloc="37" statements="9" conditionals="0" coveredstatements="7"/>
+            <class name="AppTest">
+               <metrics coveredelements="11" complexity="6" methods="4" testruns="2" statements="9" coveredconditionals="0" coveredmethods="4" elements="13" testfailures="0" testduration="0.045" conditionals="0" coveredstatements="7" testpasses="2"/>
+            </class>
+            <line complexity="1" visibility="public" signature="setUpStreams() : void" num="24" count="2" type="method"/>
+            <line num="26" count="2" type="stmt"/>
+            <line complexity="2" visibility="public" signature="testAppConstructor() : void" num="32" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="testAppMain() : void" num="44" testsuccess="true" count="1" testduration="0.045" type="method"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="51" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="cleanUpStreams() : void" num="58" count="2" type="method"/>
+            <line num="60" count="2" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>
