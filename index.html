@@ -7,31 +7,63 @@
     <title>Accueil</title>
     <style>
        @font-face {
-           font-family: "myFont";
+           font-family: "light";
            src: url("src/main/font/Roboto-Light.ttf");
        }
-       body { font-family: "myFont"; }
+       @font-face {
+           font-family: "medium";
+           src: url("src/main/font/Roboto-Medium.ttf");
+       }
+       body { font-family: "light"; }
+       ul { list-style:none; }
+       li { margin : 1em; display : flex; flex-direction: column; justify-content : center; }
+       span { display : flex; flex-direction: row; justify-content : center; margin-bottom: 2em; }
+       a { text-decoration:none; color: #000000; margin: 0 auto; width: 15%; }
+       button {
+           width: 100%;
+           align-self : center;
+           border: none;
+           font-family: "medium";
+           border-radius : 2em;
+           display: block;
+           text-align: center;
+           cursor: pointer;
+           text-transform: uppercase;
+           outline: none;
+           overflow: hidden;
+           font-weight: 600;
+           font-size: 15px;
+           background-color: #379EC1;
+           margin: 0 auto;
+           padding: 1em 2em;
+       }
+       button:hover {
+           color: white;
+           background-color: #659224;
+       }
    </style>
 </head>
  <body>
-     <img src="src/main/images/logo.PNG">
+     <span>
+         <img src="src/main/images/logo.PNG">
+     </span>
      <ul>
 
-<li><a href="afoley.html">afoley</a></li>
+<li><a href="afoley.html"><button type="button">afoley</button></a></li>
 
-<li><a href="cberthier.html">cberthier</a></li>
+<li><a href="cberthier.html"><button type="button">cberthier</button></a></li>
 
-<li><a href="jmacclane.html">jmacclane</a></li>
+<li><a href="jmacclane.html"><button type="button">jmacclane</button></a></li>
 
-<li><a href="jrouletabille.html">jrouletabille</a></li>
+<li><a href="jrouletabille.html"><button type="button">jrouletabille</button></a></li>
 
-<li><a href="jwest.html">jwest</a></li>
+<li><a href="jwest.html"><button type="button">jwest</button></a></li>
 
-<li><a href="mriggs.html">mriggs</a></li>
+<li><a href="mriggs.html"><button type="button">mriggs</button></a></li>
 
-<li><a href="sconnor.html">sconnor</a></li>
+<li><a href="sconnor.html"><button type="button">sconnor</button></a></li>
 
-<li><a href="sholmes.html">sholmes</a></li>
+<li><a href="sholmes.html"><button type="button">sholmes</button></a></li>
     </ul>
 </body>
 </html>

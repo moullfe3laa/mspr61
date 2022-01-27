@@ -7,20 +7,31 @@
            <title>Fiche agent</title>
            <style>
                @font-face {
-                   font-family: "myFont";
+                   font-family: "light";
                    src: url("src/main/font/Roboto-Light.ttf");
                }
-               ul { list-style:none; }
-               body { font-family: "myFont"; }
+               @font-face {
+                   font-family: "medium";
+                   src: url("src/main/font/Roboto-Medium.ttf");
+               }
+               body { font-family: "light"; padding-left: 2em; padding-right: 2em; }
+               h1 { font-family: "medium"; color: #379EC1; border: 0.3em solid #659224; padding : 0.5em; }
+               ul { list-style:none; padding-left: 0; }
+               li { color : #000000; }
+               span { display : flex; flex-direction: row; justify-content : center; margin-bottom: 2em; }
+               #row { display : flex; flex-direction: row; justify-content : space-around; }
+               #column { display : flex; flex-direction: column; }
+               #idCard { display: block; }
+               img { border-radius : 2em; }
            </style>
        </head>
  <body>
-     <ul>
+     <span>
          <a href="index.html"><img title="Accueil" src="src/main/images/logo.PNG"></a>
-<h1>cberthier</h1>
-<img src="src/main/images/cberthier.jpg">
-</ul>
+     </span>
+<div id ="row"><div id ="column"><h1>Corinne Berthier</h1>
 <ul>
-<li><input type="checkbox" checked disabled>  Lampe Torche</li><li><input type="checkbox" checked disabled>Kit oreillette</li><li><input type="checkbox" checked disabled>Bombes lacrymogènes</li>    </ul>
+<li><input type="checkbox" checked disabled>Lampe Torche</li><li><input type="checkbox" checked disabled>Kit oreillette</li><li><input type="checkbox" checked disabled>Bombes lacrymogènes</li></ul></div>
+<img id="idCard" src="src/main/images/cberthier.jpg"></div>
 </body>
 </html>

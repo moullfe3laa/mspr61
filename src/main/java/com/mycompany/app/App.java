@@ -9,6 +9,7 @@ public class App
     public App() {}
 
     public static void main(String[] args) {
+        String password = "";
         BufferedReader br = null;
         ArrayList<String> staffList = new ArrayList<String>();
         String filePath = new File("").getAbsolutePath();
@@ -39,30 +40,62 @@ public class App
         }
 
         String indexOutput = """
-                            <!DOCTYPE html>
-                            <html lang="en">
-                            <head>
-                                <meta charset="UTF-8">
-                                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                <title>Accueil</title>
-                                <style>
-                                   @font-face {
-                                       font-family: "myFont";
-                                       src: url("src/main/font/Roboto-Light.ttf");
-                                   }
-                                   body { font-family: "myFont"; }
-                               </style>
-                            </head>
-                            """;
+                     <!DOCTYPE html>
+                     <html lang="en">
+                     <head>
+                         <meta charset="UTF-8">
+                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                         <title>Accueil</title>
+                         <style>
+                            @font-face {
+                                font-family: "light";
+                                src: url("src/main/font/Roboto-Light.ttf");
+                            }
+                            @font-face {
+                                font-family: "medium";
+                                src: url("src/main/font/Roboto-Medium.ttf");
+                            }
+                            body { font-family: "light"; }
+                            ul { list-style:none; }
+                            li { margin : 1em; display : flex; flex-direction: column; justify-content : center; }
+                            span { display : flex; flex-direction: row; justify-content : center; margin-bottom: 2em; }
+                            a { text-decoration:none; color: #000000; margin: 0 auto; width: 15%; }
+                            button { 
+                                width: 100%; 
+                                align-self : center; 
+                                border: none;
+                                font-family: "medium";
+                                border-radius : 2em;
+                                display: block;
+                                text-align: center;
+                                cursor: pointer;
+                                text-transform: uppercase;
+                                outline: none;
+                                overflow: hidden;
+                                font-weight: 600;
+                                font-size: 15px;
+                                background-color: #379EC1;
+                                margin: 0 auto;
+                                padding: 1em 2em;
+                            }
+                            button:hover {
+                                color: white;
+                                background-color: #659224;
+                            }
+                        </style>
+                     </head>
+                     """;
         indexOutput += """
                             <body>
-                                <img src="src/main/images/logo.PNG">
+                                <span>
+                                    <img src="src/main/images/logo.PNG">
+                                </span>
                                 <ul>
                            """;
         Collections.sort(staffList);
         for(String agent : staffList) {
-            indexOutput += "\n<li><a href=\"" + agent + ".html\">" + agent + "</a></li>\n";
+            indexOutput += "\n<li><a href=\"" + agent + ".html\"><button type=\"button\">" + agent + "</button></a></li>\n";
         }
         indexOutput += """
                         </ul>
@@ -97,23 +130,32 @@ public class App
                                <title>Fiche agent</title>
                                <style>
                                    @font-face {
-                                       font-family: "myFont";
+                                       font-family: "light";
                                        src: url("src/main/font/Roboto-Light.ttf");
                                    }
-                                   ul { list-style:none; }
-                                   body { font-family: "myFont"; }
+                                   @font-face {
+                                       font-family: "medium";
+                                       src: url("src/main/font/Roboto-Medium.ttf");
+                                   }
+                                   body { font-family: "light"; padding-left: 2em; padding-right: 2em; }
+                                   h1 { font-family: "medium"; color: #379EC1; border: 0.3em solid #659224; padding : 0.5em; }
+                                   ul { list-style:none; padding-left: 0; }
+                                   li { color : #000000; }
+                                   span { display : flex; flex-direction: row; justify-content : center; margin-bottom: 2em; }
+                                   #row { display : flex; flex-direction: row; justify-content : space-around; }
+                                   #column { display : flex; flex-direction: column; }
+                                   #idCard { display: block; }
+                                   img { border-radius : 2em; }
                                </style>
                            </head>
                     """;
             agentOutput += """
                          <body>
-                             <ul>
+                             <span>
                                  <a href="index.html"><img title="Accueil" src="src/main/images/logo.PNG"></a>
+                             </span>
                         """;
-            agentOutput += "<h1>" + agent + "</h1>\n";
-            agentOutput += "<img src=\"src/main/images/" + agent +".jpg\">\n";
-            agentOutput += "</ul>\n";
-            agentOutput += "<ul>\n";
+
 
             try {
                 ArrayList<String> agentArray = new ArrayList<>();
@@ -122,6 +164,8 @@ public class App
                 while (br2.ready()) {
                     agentArray.add(br2.readLine());
                 }
+                agentOutput += "<div id =\"row\"><div id =\"column\"><h1>" + agentArray.get(1) + " " + agentArray.get(0) + "</h1>\n";
+                agentOutput += "<ul>\n";
                 br2.close();
                 File list = new File(filePath.concat("/src/main/files/liste.txt"));
                 br = new BufferedReader(new InputStreamReader(new FileInputStream(list)));
@@ -131,7 +175,7 @@ public class App
                     String[] str = line.split("\t| ", 2);
                     for (String agentLine : agentArray) {
                         if (agentLine.equals(str[0])) {
-                            agentOutput += "<li><input type=\"checkbox\" checked disabled>" + str[1] + "</li>";
+                            agentOutput += "<li><input type=\"checkbox\" checked disabled>" + str[1].trim() + "</li>";
                         }
                     }
                 }
@@ -154,7 +198,10 @@ public class App
             }
 
             agentOutput += """
-                            </ul>
+                            </ul></div>
+                            """;
+            agentOutput += "<img id=\"idCard\" src=\"src/main/images/" + agent + ".jpg\"></div>\n";
+            agentOutput += """
                         </body>
                         </html>
                         """;
