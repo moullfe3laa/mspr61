@@ -90,7 +90,7 @@ public class App
                                <style>
                                    @font-face {
                                        font-family: "myFont";
-                                       src: url("C:\\Users\\maxju\\IdeaProjects\\mspr61\\src\\main\\font\\Roboto-Light.ttf");
+                                       src: url("src/main/font/Roboto-Light.ttf");
                                    }
                                    ul { list-style:none; }
                                    body { font-family: "myFont"; }
