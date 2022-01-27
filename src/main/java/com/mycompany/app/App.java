@@ -24,7 +24,8 @@ public class App
     public static void main(String[] args) {
         BufferedReader br = null;
         ArrayList<String> staffList = new ArrayList<String>();
-        File staff = new File("C:\\Users\\maxju\\IdeaProjects\\mspr61\\src\\main\\files\\staff.txt");
+        String filePath = new File("").getAbsolutePath();
+        File staff = new File(filePath.concat("/src/main/files/staff.txt"));
         try {
             br = new BufferedReader(new InputStreamReader(new FileInputStream(staff)));
             while (br.ready()) {
@@ -33,7 +34,7 @@ public class App
                 staffList.add(line);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Le fichier n\'a pas été trouvé, le chemin saisi est-il correct ? " + e.getMessage());
+            System.out.println("Le fichier n'a pas été trouvé, le chemin saisi est-il correct ? " + e.getMessage());
             e.printStackTrace();
         } catch (IOException e) {
             // TODO : gérer le cas du br.ready() et du br.readline()
@@ -114,13 +115,13 @@ public class App
 
             try {
                 ArrayList<String> agentArray = new ArrayList<>();
-                File agentList = new File("C:\\Users\\maxju\\IdeaProjects\\mspr61\\src\\main\\files\\" + agent + ".txt");
+                File agentList = new File(filePath.concat("/src/main/files/" + agent + ".txt"));
                 BufferedReader br2 = new BufferedReader(new InputStreamReader(new FileInputStream(agentList)));
                 while (br2.ready()) {
                     agentArray.add(br2.readLine());
                 }
                 br2.close();
-                File list = new File("C:\\Users\\maxju\\IdeaProjects\\mspr61\\src\\main\\files\\liste.txt");
+                File list = new File(filePath.concat("/src/main/files/liste.txt"));
                 br = new BufferedReader(new InputStreamReader(new FileInputStream(list)));
                 while (br.ready()) {
                     // Lit une chaîne de caractère : une ligne du fichier
