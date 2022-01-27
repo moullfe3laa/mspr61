@@ -8,19 +8,6 @@ public class App
 {
     public App() {}
 
-    public static String tool(ArrayList<String> agentArray, String[] str) {
-        String agentOutput = "";
-        for (String agentLine : agentArray) {
-            if(agentLine.equals(str[0])) {
-                agentOutput = "<li><input type=\"checkbox\" checked disabled>" + str[1] + "</li>";
-            } else {
-                agentOutput = "<li><input type=\"checkbox\" disabled>" + str[1] + "</li>";
-            }
-            System.out.println(str[0]);
-        }
-        return agentOutput;
-    }
-
     public static void main(String[] args) {
         BufferedReader br = null;
         ArrayList<String> staffList = new ArrayList<String>();
@@ -100,7 +87,14 @@ public class App
                                <meta http-equiv="X-UA-Compatible" content="IE=edge">
                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                <title>Fiche agent</title>
-                               <style>ul { list-style:none; }</style>
+                               <style>
+                                   @font-face {
+                                       font-family: "myFont";
+                                       src: url("C:\\Users\\maxju\\IdeaProjects\\mspr61\\src\\main\\font\\Roboto-Light.ttf");
+                                   }
+                                   ul { list-style:none; }
+                                   body { font-family: "myFont"; }
+                               </style>
                            </head>
                     """;
             agentOutput += """
@@ -127,7 +121,11 @@ public class App
                     // Lit une chaîne de caractère : une ligne du fichier
                     String line = br.readLine();
                     String[] str = line.split("\t| ", 2);
-                    agentOutput += tool(agentArray, str);
+                    for (String agentLine : agentArray) {
+                        if (agentLine.equals(str[0])) {
+                            agentOutput += "<li><input type=\"checkbox\" checked disabled>" + str[1] + "</li>";
+                        }
+                    }
                 }
             } catch (FileNotFoundException e) {
                 System.out.println("Le fichier n\'a pas été trouvé, le chemin saisi est-il correct ? " + e.getMessage());
