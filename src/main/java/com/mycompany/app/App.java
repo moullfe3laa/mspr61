@@ -46,10 +46,18 @@ public class App
                                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                 <title>Accueil</title>
+                                <style>
+                                   @font-face {
+                                       font-family: "myFont";
+                                       src: url("src/main/font/Roboto-Light.ttf");
+                                   }
+                                   body { font-family: "myFont"; }
+                               </style>
                             </head>
                             """;
         indexOutput += """
                             <body>
+                                <img src="src/main/images/logo.PNG">
                                 <ul>
                            """;
         Collections.sort(staffList);
@@ -90,7 +98,7 @@ public class App
                                <style>
                                    @font-face {
                                        font-family: "myFont";
-                                       src: url("C:\\Users\\maxju\\IdeaProjects\\mspr61\\src\\main\\font\\Roboto-Light.ttf");
+                                       src: url("src/main/font/Roboto-Light.ttf");
                                    }
                                    ul { list-style:none; }
                                    body { font-family: "myFont"; }
@@ -100,7 +108,7 @@ public class App
             agentOutput += """
                          <body>
                              <ul>
-                                 <a href="index.html">Accueil</a>
+                                 <a href="index.html"><img title="Accueil" src="src/main/images/logo.PNG"></a>
                         """;
             agentOutput += "<h1>" + agent + "</h1>\n";
             agentOutput += "<img src=\"src/main/images/" + agent +".jpg\">\n";
